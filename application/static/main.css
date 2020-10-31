@@ -1,0 +1,43 @@
+nav{
+    margin:auto;
+    border-bottom: 2px solid #f8f9fa;
+    background-color: white;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1)
+}
+#navigation-list {
+
+}
+.navbar-brand {
+    font-size:22px;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-brand span {
+    display: block;
+    background-color: #ff80bf;
+    padding-left:10px;
+    padding-right:10px;
+    color: white;
+    border-radius: 20px;
+    text-decoration-color: white;
+}
+.navbar-brand a {
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-item {
+    font-size:15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+
+.nav-link {
+    font-size:15px;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+.alert{
+  text-align: center;
+}

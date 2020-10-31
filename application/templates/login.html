@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+  <div class="container-form">
+      <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+          <legend class="mb-4 border-bottom">Log in</legend>
+          <div class="form-group">
+            {{ form.email.label(class="form-control-label")}}
+            {% if form.email.errors %}
+              {{ form.email(class="form-control form-control-lg is-invalid")}}
+              <div class="invalid-feedback">
+                 {% for error in form.email.errors%}
+                  <span>{{ error }}</span>
+                 {% endfor %}
+              </div>
+            {% else %}
+                {{ form.email(class="form-control form-control-lg")}}
+            {% endif %}
+          </div>
+          <div class="form-group">
+            {{ form.password.label(class="form-control-label")}}
+            {% if form.password.errors %}
+              {{ form.password(class="form-control form-control-lg is-invalid")}}
+              <div class="invalid-feedback">
+                 {% for error in form.password.errors%}
+                  <span>{{ error }}</span>
+                 {% endfor %}
+              </div>
+            {% else %}
+                {{ form.password(class="form-control form-control-lg")}}
+            {% endif %}
+          </div>
+          <div class="form-check">
+            {{ form.remember_me(class="form-check-input") }}
+            {{ form.remember_me.label(class="form-check-label") }}
+          </div>
+          <div class="form-group">
+            {{ form.submit(class="btn btn-outline-primary")}}
+            <small id="emailInput" class="form-text mt-1 ml-2 text-muted">
+              <a href="#">Forgot password?</a>
+            </small>
+          </div>
+        </fieldset>
+        <div class="border-top p-3">
+          <small id="emailInput" class="form-text mt-1 ml-2 text-muted">
+            <a class="ml-1" href="{{ url_for('register') }}">Need an account?</a>
+          </small>
+        </div>
+      </form>
+      <div class="text">
+          <span>Or</span>
+      </div>
+      <div class="google-login">
+          <span><img class="img-responsive" src="/static/images/google-icon.png"></span>
+          <button type="button" class="btn btn-outline-info">Login with google</button>
+      </div>
+  </div>
+</div>
+
+{% endblock content%}

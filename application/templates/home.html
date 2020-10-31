@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+    {% block content %}
+      <h1>All workouts</h1>
+      {% for workout in workouts %}
+      <h2><a href="{{ url_for('workout', workout_id=workout.id)}}">{{ workout.name }}</a></h2>
+      {% endfor %}
+    {% endblock content%}
